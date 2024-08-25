@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form - ALT SCHOOL</title>
+    <link rel="stylesheet" href="application.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="application.html">Application Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <form action="#" method="POST" class="signup-form">
+            <h1>Signup</h1>
+            <p>Take the next steps to apply at AltSchool Africa</p>
+
+            <div class="form-group">
+                <div class="form-field">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter first name" required>
+                </div>
+                <div class="form-field">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter last name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-field">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="" disabled selected>Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="dob">Date of Birth</label>
+                    <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                </div>
+                <div class="form-field">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="08154387000" required pattern="[0-9]{11}" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-field">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="" disabled selected>Select your country</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="state">State/City of Residence</label>
+                    <input type="text" id="state" name="state" placeholder="Enter your state of residence" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-field full-width">
+                    <label for="referral">How did you hear about us?</label>
+                    <select id="referral" name="referral">
+                        <option value="" disabled selected>Select channel</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                    <span class="tooltip">
+                        Contains at least 8 characters<br>
+                        Contains upper case letters (A-Z)<br>
+                        Contains lower case letters (a-z)<br>
+                        Contains at least a number<br>
+                        Contains at least a special character
+                    </span>
+                </div>
+                <div class="form-field">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Enter password again" required>
+                </div>
+            </div>
+
+            <p class="agreement">By clicking continue, I agree to <a href="#">Terms of Use</a> and acknowledge that I have read the <a href="#">Privacy Policy</a>.</p>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ALT SCHOOL. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

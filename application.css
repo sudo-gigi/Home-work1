@@ -1,0 +1,314 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color:#f4f4f4;
+    min-height: 100vh;
+    background-size: cover;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #aaa;
+    text-decoration: none;
+}
+
+
+/* Main Content */
+.container {
+    max-width: 800px; /* Ensures the form container doesn't stretch too wide */
+    margin: 0 auto; /* Centers the form on the page */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 5px;
+    
+    
+}
+
+.signup-form {
+    width: 100%;
+}
+
+.signup-form h1 {
+    text-align: center;
+    color: #342347;
+    margin-bottom: 20px;
+}
+
+.signup-form p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    width: 45%;
+}
+
+
+.form-field.full-width {
+    flex-basis: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight:lighter;
+    color: #515050;
+    font-size: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #aaa;
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+}
+
+input[type="text"]:hover {
+    border-color: #5752c5;
+}
+
+input[type="email"]:hover {
+    border-color: #5752c5;
+}
+
+input[type="password"]:hover {
+    border-color: #5752c5;
+}
+
+input[type="tel"]:hover {
+    border-color: #5752c5;
+}
+
+select:hover {
+   border-color: #5752c5;
+}
+
+
+#dob::placeholder{
+    color: #333;
+}
+
+
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #aaa;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 32%;
+    transform: translateX(-50%);
+    background-color: #342347;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 8px;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 130px; 
+    margin-top: 5px;
+    z-index: 10;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Position it right below the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #342347 transparent transparent transparent; /* Creates the triangle */
+}
+
+.form-field:hover .tooltip {
+    display: block;
+}
+
+.agreement {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.agreement a {
+    color: #6c63ff;
+    text-decoration: none;
+}
+
+.agreement a:hover {
+    text-decoration: underline;
+}
+
+button.submit-button {
+    width: 100%;
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-button:hover {
+    background-color: #5752c5;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 300px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .form-group {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .form-field {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+    .tooltip {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px; 
+        font-size: 10px;
+    }
+
+    .tooltip::after {
+        left: 50%;
+    }
+
+    .agreement {
+        font-size: 13px;
+    }
+
+    button.submit-button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .label {
+        font-size: 10px 
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 600px) {
+    header {
+        padding: 8px 0;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+        font-size: 12px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .signup-form h1 {
+        font-size: 25px;
+    }
+    .signup-form p {
+        font-size: 10px;
+    }
+
+    label {
+        font-size: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    select {
+        padding: 8px;
+        font-size: 9px;
+    }
+
+
+    button.submit-button {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .agreement {
+        font-size: 12px;
+    }
+
+    .tooltip {
+        width: 90px;
+        font-size: 9px;
+    }
+}
