@@ -220,7 +220,7 @@ footer {
 
 
 /* Mobile Responsive Adjustments */
-@media (max-width: 300px) {
+@media (max-width: 480px) {
     
     header {
         font-size: 2px;
