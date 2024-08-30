@@ -307,7 +307,7 @@ footer {
     input[type="password"],
     input[type="tel"],
     select {
-        padding: 8px;
+        padding: 10px;
         font-size: 9px;
     }
 
